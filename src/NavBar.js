@@ -1,9 +1,8 @@
 const NavBar = () => {
     return (
         <nav className="navbar">
-            <div>
-                <div>
-                 <a href="">Bpro Blog</a>
+                <div >
+                 <a className="logo" href="">Bpro Blog</a>
                 </div>
                 <ul className="liens">
                     <li>
@@ -13,7 +12,7 @@ const NavBar = () => {
                     <a href="" className="lien">Creér Article</a>
                     </li>
                 </ul>
-            </div>
+           
         </nav>
     );
 }
