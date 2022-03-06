@@ -167,3 +167,7 @@ label {
   font-weight: normal;
   font-size: 1.2rem;
 }
+
+.blog-title {
+  text-align: center;
+}
