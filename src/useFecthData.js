@@ -7,7 +7,9 @@ const useFetchData = (url) => {
     const [error, setError] = useState(null)
 
     useEffect(()=> {
-        fetch(url)
+        const abortConnection = new AbortController();
+
+        fetch(url,{signal : abortConnection.signal})
         .then(response => {
             if(!response.ok)
                 throw new Error('Une erreur est survenu ...')
@@ -22,6 +24,8 @@ const useFetchData = (url) => {
         }).finally(() => {
             setIsLoading(false);
         })
+
+        return () => abortConnection.abort()
 
     },[url])
 

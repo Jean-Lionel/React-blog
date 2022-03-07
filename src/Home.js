@@ -1,6 +1,7 @@
 import BlogList from './BlogList';
 import useFetchData from './useFecthData';
 
+
 const Home = () => {
    
     const {data: blogs, isLoading, error} = useFetchData("http://localhost:8000/blogs")
