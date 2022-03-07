@@ -3,9 +3,7 @@ import BlogList from './BlogList';
 
 const Home = () => {
     const [blogs , setBlog] = useState(null);
-    const [name, setName] = useState("Jean Lionel")
-
-   
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(()=> {
         fetch("http://localhost:8000/blogs")
@@ -13,15 +11,17 @@ const Home = () => {
             return response.json();
         }).then(data => {
             setBlog(data);
+            setIsLoading(false);
         })
 
-    },[name])
-
+    },[])
     
     return (
         <div className="home">
-                <p>{name}</p>
-                <button onClick={()=> setName("Inininahazwe Nadine")}>Change Name</button>
+                {isLoading && <div>
+                    En cour de chargement
+                    </div>
+                }
                 {blogs && <BlogList blogs={blogs} title={'Liste des blogs'}  />  }
                 {/* <BlogList blogs={blogs.filter((e) => e.author === "Jean")} title={'Liste des articles publié par Jean '} /> */}  
           
