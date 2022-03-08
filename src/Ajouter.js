@@ -1,5 +1,6 @@
 const Ajouter = () => {
-    return ( <div>
+    return ( 
+    <div>
         <h1>Ajouter un Nouveau article</h1>
     </div> );
 }

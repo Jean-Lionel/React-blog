@@ -1,8 +1,13 @@
 import NavBar from './NavBar'
 import Home from './Home'
 import Ajouter from './Ajouter'
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
-import { BrowserRouter as Router,  Route, Switch } from 'react-router-dom';
+import BlogDetail from './BlogDetail';
 
 function App() {
   
@@ -15,8 +20,11 @@ function App() {
               <Route exact path="/">
                 <Home />
               </Route>
-              <Route path="/ajouter">
+              <Route path="/ajouter" exact>
                 <Ajouter />
+              </Route>
+              <Route path='/blog/:lionel' exact={true} >
+                <BlogDetail />
               </Route>
             </Switch>
           </div>
