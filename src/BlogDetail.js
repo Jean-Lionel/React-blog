@@ -13,7 +13,7 @@ const BlogDetail = () => {
 
         {blog && (
             <div className="blog">
-                <h1 className="blog-title">{blog.title}</h1>
+                <h1 className="blog-titre">{blog.title}</h1>
                  <small className="blog-publication-date">{`Publié le ${blog.id}`}</small>
                  <p className="blog-body">
                      {blog.body}
