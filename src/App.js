@@ -23,7 +23,7 @@ function App() {
               <Route path="/ajouter" exact>
                 <Ajouter />
               </Route>
-              <Route path='/blog/:lionel' exact={true} >
+              <Route path='/blog/:id' exact={true} >
                 <BlogDetail />
               </Route>
             </Switch>
