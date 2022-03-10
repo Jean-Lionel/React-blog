@@ -1,6 +1,7 @@
 import NavBar from './NavBar'
 import Home from './Home'
 import Ajouter from './Ajouter'
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -8,6 +9,7 @@ import {
 } from "react-router-dom";
 
 import BlogDetail from './BlogDetail';
+import Author from './Author';
 
 function App() {
   
@@ -25,6 +27,9 @@ function App() {
               </Route>
               <Route path='/blog/:id' exact={true} >
                 <BlogDetail />
+              </Route>
+              <Route path="/author" exact>
+                <Author />
               </Route>
             </Switch>
           </div>

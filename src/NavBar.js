@@ -13,6 +13,9 @@ const NavBar = () => {
                     <li>
                     <Link to="/ajouter" className="lien">Creér Article</Link>
                     </li>
+                    <li>
+                    <Link to="/author" className="lien">Author</Link>
+                    </li>
                 </ul>
            
         </nav>
