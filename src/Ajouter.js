@@ -11,14 +11,17 @@ const Ajouter = () => {
         e.preventDefault();
         const date = new Date().toISOString();
         const blog = {title: title, author: author, body: body, date: date}
+        setIsLoading(true);
 
         fetch("http://localhost:8000/blogs/",{
             method: "POST",
             headers: {"Content-Type": "application/json"},
-            body: JSON.stringify(blog),
+            body: JSON.stringify(blog)
 
         }).then((response) => {
             console.log(response)
+            setIsLoading(false)
+           // history.go(-1)
         })
 
     }
