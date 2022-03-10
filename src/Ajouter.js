@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useHistory } from "react-router-dom";
 
 const Ajouter = () => {
 
@@ -6,6 +7,7 @@ const Ajouter = () => {
     const [author,setAuthor] = useState("");
     const [body,setBody] = useState("");
     const [isLoading, setIsLoading] = useState(false);
+    const history = useHistory();
 
     const HandleBlogAdding = (e) => {
         e.preventDefault();
@@ -21,6 +23,7 @@ const Ajouter = () => {
         }).then((response) => {
             console.log(response)
             setIsLoading(false)
+            history.push("/")
            // history.go(-1)
         })
 
