@@ -171,3 +171,18 @@ label {
 .blog-title {
   text-align: center;
 }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+tbody tr:nth-child(odd) {
+  color: yellowgreen;
+}
+th {
+  text-align: left;
+}
+
+tr {
+  border-bottom: 1px solid rgba(119, 119, 119, 0.7);
+}

@@ -38,9 +38,34 @@
   ],
   "authors": [
     {
-      "id": 1,
-      "name": "Jean Lionel",
-      "tel": "79614036"
+      "name": "Esse ipsum rerum ei",
+      "telephone": "+1 (409) 884-3972",
+      "currentDate": "3/10/2022",
+      "id": 5
+    },
+    {
+      "name": "Ut molestias dolorib",
+      "telephone": "+1 (122) 173-4443",
+      "currentDate": "3/10/2022",
+      "id": 6
+    },
+    {
+      "name": "Laborum Velit quisq",
+      "telephone": "+1 (252) 763-6322",
+      "currentDate": "3/10/2022",
+      "id": 7
+    },
+    {
+      "name": "In alias facilis ad ",
+      "telephone": "+1 (225) 538-3922",
+      "currentDate": "3/10/2022",
+      "id": 8
+    },
+    {
+      "name": "Ad minima exercitati",
+      "telephone": "+1 (507) 594-2831",
+      "currentDate": "3/12/2022",
+      "id": 9
     }
   ]
 }
