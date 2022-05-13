@@ -1,6 +1,6 @@
-import AuteurList from "./Authors/AuteurList";
+import AuteurList from "../Authors/AuteurList";
 import { useState } from "react";
-import AddAuthor from "./Authors/AddAuthor";
+import AddAuthor from "../Authors/AddAuthor";
 
 
 const Author = () => {

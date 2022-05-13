@@ -1,13 +1,6 @@
 {
   "blogs": [
     {
-      "title": "Nisi quisquam id qui",
-      "author": "Tony",
-      "body": "Vero dolores tempori",
-      "date": "2022-03-08T04:36:46.426Z",
-      "id": 8
-    },
-    {
       "title": "Dicta cupidatat volu",
       "author": "Tony",
       "body": "Et dolor cum ad nisi",
@@ -37,12 +30,6 @@
     }
   ],
   "authors": [
-    {
-      "name": "Esse ipsum rerum ei",
-      "telephone": "+1 (409) 884-3972",
-      "currentDate": "3/10/2022",
-      "id": 5
-    },
     {
       "name": "Ut molestias dolorib",
       "telephone": "+1 (122) 173-4443",

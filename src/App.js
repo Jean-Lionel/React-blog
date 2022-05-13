@@ -1,38 +1,27 @@
-import NavBar from './NavBar'
-import Home from './Home'
-import Ajouter from './Ajouter'
-
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
 
-import BlogDetail from './BlogDetail';
-import Author from './Author';
+import Home from "./Home"
+import Admin from "./Pages/Admin";
+import Bonjour from "./Pages/Bonjour";
+import Login from "./Pages/Login";
+import ProtectedRoute from "./utility/ProtectedRouter";
+
 
 function App() {
   
   return (
     <Router>
       <div className="App">
-        <NavBar />
-          <div className="contenu">
-            <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
-              <Route path="/ajouter" exact>
-                <Ajouter />
-              </Route>
-              <Route path='/blog/:id' exact={true} >
-                <BlogDetail />
-              </Route>
-              <Route path="/author" exact>
-                <Author />
-              </Route>
-            </Switch>
-          </div>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/bonjour" component={Bonjour} />
+          <Route exact path="/login" component={Login} />
+          <ProtectedRoute exact path="/admin" component={Admin} /> 
+        </Switch>
       </div>
     </Router>
   );

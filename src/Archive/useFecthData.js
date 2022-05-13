@@ -1,4 +1,5 @@
 import {useState,useEffect} from 'react'
+import axios from 'axios'
 
 const useFetchData = (url) => {
 
@@ -9,7 +10,7 @@ const useFetchData = (url) => {
     useEffect(()=> {
         const abortConnection = new AbortController();
 
-        fetch(url,{signal : abortConnection.signal})
+        axios.get(url,{signal : abortConnection.signal})
         .then(response => {
             if(!response.ok)
                 throw new Error('Une erreur est survenu ...')

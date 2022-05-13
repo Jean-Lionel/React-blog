@@ -1,4 +1,4 @@
-import useFetchData from "../useFecthData";
+import useFetchData from "../Archive/useFecthData";
 
 const AuteurList = () => {
     const {data: authors, isLoading, error} = useFetchData("http://localhost:8000/authors");

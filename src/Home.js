@@ -1,28 +1,16 @@
-import BlogList from './BlogList';
-import useFetchData from './useFecthData';
-
+import {Link} from "react-router-dom"
 
 const Home = () => {
-   
-    const {data: blogs, isLoading, error} = useFetchData("http://localhost:8000/blogs")
-    
-    return (
-        <div className="home">
-                {
-                    error && 
-                    <div style={{ "color" : "red", "textAlign": "center" }}>
-                        {error}
-                    </div>
-                }
-                {isLoading && <div>
-                    En cour de chargement
-                    </div>
-                }
-                {blogs && <BlogList blogs={blogs} title={'Liste des blogs'}  />  }
-                {/* <BlogList blogs={blogs.filter((e) => e.author === "Jean")} title={'Liste des articles publié par Jean '} /> */}  
-          
-        </div>
-    );
-}
+    return ( <div>
+        <h1>Home</h1>
+        <Link to="/bonjour">
+        <p>Bonjour</p>
+        </Link>
 
+        <Link to="/login">
+            <p>Login</p>
+        </Link>
+    </div> );
+}
+ 
 export default Home;
